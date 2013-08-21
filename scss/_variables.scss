@@ -1,0 +1,45 @@
+/* ======= color ======= */
+
+@mixin hl($thick:1px, $color:red){
+	border: $thick solid $color;
+}
+
+$blue: #1f355d;
+$white: #fff;
+$lgray: #eaeaea;
+$gray: #c0c0c0;
+$dgray: #464646;
+
+/* ======= type ======= */
+
+
+$smalltext: 0.875em;
+$text: 1em;
+$h-four: 1.125em;
+$h-three: 1.5em;
+$h-two: 1.65em;
+$h-one: 2em;
+
+$norm: 400;
+$med: 500;
+$sbold: 600;
+$bold: 700;
+
+@mixin copy($font:"Open Sans, Helvetica, sans-serif", $color:$dgray, $size:$text, $weight:$normal){
+	font-family:$font;
+	color:$color;
+	font-size: $size;
+	font-weight:$weight;
+}
+
+/* ======= spacing ======= */
+
+/* ======= media queries ======= */
+$pym : "(max-width:767px)";
+/* $parker : "(min-width:457px)"; */
+$barton : "(min-width:768px)";
+$rogers : "(min-width:1441px)";
+$stark : "";
+$odinsson : "";
+$banner : "";
+
