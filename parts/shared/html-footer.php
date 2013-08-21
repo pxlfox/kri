@@ -67,7 +67,7 @@
 	<script>
 		$(function() {
 			var pull 		= $('#pull');
-				menu 		= $('#menuBar ul');
+				menu 		= $('#menuBar ul.clearfix');
 				menuHeight	= menu.height();
 
 			$(pull).on('click', function(e) {
