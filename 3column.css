@@ -1,0 +1,27 @@
+/* 3 Column Dropdown */
+
+.column {
+	width: 600px !important;
+}
+
+.column ul{
+	display: block !important;
+}
+
+.column li {
+	border: none !important;
+	display: inline-table;
+	text-align: left;
+	margin-left: 6em;
+}
+
+.column li:first-child {
+	margin-left: 0;
+}
+
+
+.column>li>a:after {
+	content: "";
+	clear: both;
+	display: block;
+}
