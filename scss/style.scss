@@ -256,12 +256,12 @@ header {
 /* ======== 3-Column Dropdown ======== */
 
 .column {
-	width: 600px !important;
-	height: 640px;
+	width: 650px !important;
+	height: 650px;
 	ul{
 		display: block !important;
 		margin-top: 3em;
-		margin-left: -9.9em;
+		margin-left: -12em;
 		width: 180px !important;
 		position: relative;
 	}
@@ -270,7 +270,7 @@ header {
 		display: inline-table;
 		text-align: left;
 		float: left;
-		margin-left: 6.6em;
+		margin-left: 6em;
 		&:first-child {
 			margin-left: 0;
 		}
@@ -376,53 +376,6 @@ header {
 		font-size: 1.1em;
 		letter-spacing: 1px;
 	}
-}
-
-/* ======== 3-Column Dropdown ======== */
-
-.column {
-	width: 600px !important;
-	height: 640px;
-	ul{
-		display: block !important;
-		margin-top: 3em;
-		margin-left: -9.9em;
-		width: 180px !important;
-		position: relative;
-	}
-	>li {
-		border: none !important;
-		display: inline-table;
-		text-align: left;
-		float: left;
-		margin-left: 6.6em;
-		&:first-child {
-			margin-left: 0;
-		}
-		&:last-child {
-			margin-left: 4.6em;
-			border: 1px solid red;
-		}
-		>a:after {
-			content: "";
-			clear: both;
-			display: block;
-		}
-	}	
-}
-.column-right li {
-	border: none !important;
-}
-
-#navImage {
-	border: 1px solid red;
-	background-image: url(img/building1thumb.jpg);
-	width: 178px;
-	height: 118px;
-}
-
-#navTestimonial {
-	border: 1px solid red;
 }
 
 /* ======== Slideshow ======== */
