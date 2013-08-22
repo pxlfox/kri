@@ -339,8 +339,7 @@ header {
       width: 100%;
       top: 0;
       text-align: center;
-      padding: 1.5em 0px;
-      height: auto; } }
+      padding: 1.5em 0px; } }
   header img.kriLogo {
     position: relative;
     width: auto;
@@ -377,7 +376,7 @@ header {
   box-shadow: 0px 0px 30px #555; }
   @media (max-width: 767px) {
     #menuBar {
-      top: 0px;
+      top: 0;
       height: auto; } }
   #menuBar #menu {
     list-style: none;
@@ -407,14 +406,8 @@ header {
           background: #fff; } }
       #menuBar #menu li:hover > ul {
         display: block; }
-        @media (max-width: 767px) {
-          #menuBar #menu li:hover > ul {
-            display: none; } }
       #menuBar #menu li:hover > .tooltip {
         display: block; }
-        @media (max-width: 767px) {
-          #menuBar #menu li:hover > .tooltip {
-            display: none; } }
       #menuBar #menu li:last-child > ul {
         right: 0;
         margin-right: .5em; }
@@ -425,11 +418,10 @@ header {
         @media (max-width: 767px) {
           #menuBar #menu li a {
             display: inline-block;
-            width: 100%;
-            text-align: left;
+            width: 100px;
+            text-align: center;
             text-decoration: none;
-            line-height: 40px;
-            text-indent: 35px; } }
+            line-height: 40px; } }
     #menuBar #menu ul {
       position: absolute;
       top: 100%;
