@@ -20,7 +20,7 @@
 					});
 					
 					var align = $(this).attr('align').split(' ');
-					var margin = '10%';
+					var margin = '19%';
 					
 					if(align[0].toLowerCase() == 'right')
 					{
