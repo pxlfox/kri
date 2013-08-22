@@ -5,7 +5,7 @@
 	<div class="clear"></div>
 	<div id="logoBlockAngle"></div>
 	<div id="menuBar">
-		<ul class="clearfix">
+		<ul id="menu" class="clearfix">
 			<?php js_list_pages_include_tree('include_tree=8'); ?>
 			<?php wp_list_pages('exclude=2,8&title_li=&sort_column=menu_order&depth=2'); ?>
 		</ul>
