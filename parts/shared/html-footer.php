@@ -1,13 +1,9 @@
 
 	<?php wp_footer(); ?>
-	<script type="text/javascript" src="<?php echo get_dir_path("js"); ?>/jquery.js"></script>
 	<script type="text/javascript" src="<?php echo get_dir_path("js"); ?>/jquery.localscroll-1.2.7-min.js"></script>
 	<script type="text/javascript" src="<?php echo get_dir_path("js"); ?>/jquery.parallax-1.1.3.js"></script>
 	<script type="text/javascript" src="<?php echo get_dir_path("js"); ?>/jquery.scrollTo-1.4.2-min.js"></script>
 	<script type="text/javascript" src="<?php echo get_dir_path("js"); ?>/jquery.slides.min.js"></script>
-	<script type="text/javascript" src="<?php echo get_dir_path("js"); ?>/ccv.js"></script>
-	<script type="text/javascript" src="<?php echo get_dir_path("js"); ?>/face.js"></script>
-	<script type="text/javascript" src="<?php echo get_dir_path("js"); ?>/jquery.facedetection.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
 				$('#staff .post div').each(function() {
