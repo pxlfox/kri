@@ -290,11 +290,19 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
   color: #1f355d;
-  font-weight: 600; }
+  font-weight: 700; }
   a:active {
     color: #7091d4; }
   a:hover {
     color: #30549d; }
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0)); }
 
 /* ======== Top Nav Bar ======== */
 nav {
@@ -339,7 +347,8 @@ header {
       width: 100%;
       top: 0;
       text-align: center;
-      padding: 1.5em 0px; } }
+      padding: 1.5em 0px;
+      height: auto; } }
   header img.kriLogo {
     position: relative;
     width: auto;
@@ -376,7 +385,7 @@ header {
   box-shadow: 0px 0px 30px #555; }
   @media (max-width: 767px) {
     #menuBar {
-      top: 0;
+      top: 0px;
       height: auto; } }
   #menuBar #menu {
     list-style: none;
@@ -394,34 +403,52 @@ header {
         display: none;
         width: 100%;
         height: auto; } }
-    #menuBar #menu li {
+    #menuBar #menu > li {
       float: left;
-      margin-top: 0.7em; }
+      margin-top: 0.7em;
+      transition: 0s display;
+      -webkit-transition: 0s display;
+      transition-delay: 0.5s;
+      -webkit-transition-delay: 0.5s; }
       @media (max-width: 767px) {
-        #menuBar #menu li {
+        #menuBar #menu > li {
           margin: 0 auto;
           display: block;
           width: 100%;
           position: relative;
           background: #fff; } }
-      #menuBar #menu li:hover > ul {
-        display: block; }
-      #menuBar #menu li:hover > .tooltip {
-        display: block; }
-      #menuBar #menu li:last-child > ul {
+      #menuBar #menu > li:hover > ul {
+        display: block;
+        top: 140%;
+        right: -130%;
+        transition: 0s display;
+        -webkit-transition: 0s display;
+        transition-delay: 0.5s;
+        -webkit-transition-delay: 0.5s; }
+        @media (max-width: 767px) {
+          #menuBar #menu > li:hover > ul {
+            display: none; } }
+      #menuBar #menu > li:hover > .tooltip {
+        display: block;
+        top: 20px; }
+        @media (max-width: 767px) {
+          #menuBar #menu > li:hover > .tooltip {
+            display: none; } }
+      #menuBar #menu > li:last-child > ul {
         right: 0;
         margin-right: .5em; }
-      #menuBar #menu li a {
+      #menuBar #menu > li a {
         display: block;
         padding: 10px 10px;
         font-size: .9em; }
         @media (max-width: 767px) {
-          #menuBar #menu li a {
+          #menuBar #menu > li a {
             display: inline-block;
-            width: 100px;
-            text-align: center;
+            width: 100%;
+            text-align: left;
             text-decoration: none;
-            line-height: 40px; } }
+            line-height: 40px;
+            text-indent: 35px; } }
     #menuBar #menu ul {
       position: absolute;
       top: 100%;
@@ -452,9 +479,9 @@ header {
       #menuBar #menu ul ul {
         background-color: #181818;
         opacity: 1;
-        margin-top: 3.55em;
+        /* margin-top: 3.55em; */
         position: absolute;
-        left: 115%;
+        left: 92%%;
         top: 0; }
   #menuBar > ul ul {
     display: none; }
@@ -463,12 +490,12 @@ header {
 
 /* ======== 3-Column Dropdown ======== */
 .column {
-  width: 600px !important;
-  height: 640px; }
+  width: 650px !important;
+  height: 650px; }
   .column ul {
     display: block !important;
     margin-top: 3em;
-    margin-left: -9.9em;
+    margin-left: -12em;
     width: 180px !important;
     position: relative; }
   .column > li {
@@ -476,7 +503,7 @@ header {
     display: inline-table;
     text-align: left;
     float: left;
-    margin-left: 6.6em; }
+    margin-left: 6em; }
     .column > li:first-child {
       margin-left: 0; }
     .column > li:last-child {
@@ -570,44 +597,6 @@ header {
     font-size: 1.1em;
     letter-spacing: 1px; }
 
-/* ======== 3-Column Dropdown ======== */
-.column {
-  width: 600px !important;
-  height: 640px; }
-  .column ul {
-    display: block !important;
-    margin-top: 3em;
-    margin-left: -9.9em;
-    width: 180px !important;
-    position: relative; }
-  .column > li {
-    border: none !important;
-    display: inline-table;
-    text-align: left;
-    float: left;
-    margin-left: 6.6em; }
-    .column > li:first-child {
-      margin-left: 0; }
-    .column > li:last-child {
-      margin-left: 4.6em;
-      border: 1px solid red; }
-    .column > li > a:after {
-      content: "";
-      clear: both;
-      display: block; }
-
-.column-right li {
-  border: none !important; }
-
-#navImage {
-  border: 1px solid red;
-  background-image: url(img/building1thumb.jpg);
-  width: 178px;
-  height: 118px; }
-
-#navTestimonial {
-  border: 1px solid red; }
-
 /* ======== Slideshow ======== */
 #slides {
   display: none; }
@@ -689,6 +678,51 @@ article {
 
 .post-edit-link {
   display: none; }
+
+/* ======== Staff Page ======== */
+#staff {
+  margin-top: 7em; }
+  #staff img {
+    display: none; }
+  #staff aside {
+    max-width: 400px;
+    position: absolute;
+    padding: 20px;
+    background-color: #fff; }
+  #staff .meet-staff-button {
+    position: absolute;
+    left: 0;
+    bottom: -3em;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    background: #1f355a;
+    color: #fff;
+    font-weight: 400;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: none; }
+
+/* ======== Team Page ======== */
+.emp_team .emp {
+  width: 100%; }
+  .emp_team .emp > p {
+    visibility: hidden;
+    display: none; }
+  .emp_team .emp img {
+    width: 30%;
+    height: auto;
+    float: left; }
+  .emp_team .emp .description {
+    width: 65%;
+    float: right; }
+    .emp_team .emp .description p {
+      width: 100%; }
+  .emp_team .emp:after {
+    content: "";
+    clear: both;
+    display: block; }
 
 /* ======== Blockquotes ======== */
 blockquote {
