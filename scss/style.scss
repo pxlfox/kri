@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6{
 a { 
 	text-decoration: none; 
 	color: #1f355d; 
-	font-weight:600; 
+	font-weight:700; 
 	&:active{
 		color: #7091d4;
 	}
@@ -159,9 +159,13 @@ header {
 			width:100%;
 			height:auto;
 		}
-		li {
+		>li {
 			float: left;
 			margin-top: 0.7em;
+			transition: 0s display;
+			-webkit-transition: 0s display;
+			transition-delay: 0.5s;
+			-webkit-transition-delay: 0.5s;
 			@media #{$pym}{
 				margin: 0 auto;
 				display:block;
@@ -171,12 +175,19 @@ header {
 			}
 			&:hover>ul{
 				display: block;
+				top:140%;
+				right:-130%;
+				transition: 0s display;
+				-webkit-transition: 0s display;
+				transition-delay: 0.5s;
+				-webkit-transition-delay: 0.5s;
 				@media#{$pym}{
 					display:none;
 				}
 			}
 			&:hover>.tooltip{
 				display: block;
+				top:20px;
 				@media#{$pym}{
 					display:none;
 				}
@@ -234,9 +245,9 @@ header {
 			ul{
 				background-color: #181818;
 				opacity: 1;
-				margin-top: 3.55em;
+				/* margin-top: 3.55em; */
 				position: absolute;
-				left: 115%;
+				left: 92%%;
 				top:0;
 			}
 		}
@@ -256,8 +267,13 @@ header {
 /* ======== 3-Column Dropdown ======== */
 
 .column {
+<<<<<<< HEAD
+	width: 600px !important;
+	height: 500px;
+=======
 	width: 650px !important;
 	height: 650px;
+>>>>>>> dca9440c79b34c986007577990c8f6daf29517f0
 	ul{
 		display: block !important;
 		margin-top: 3em;

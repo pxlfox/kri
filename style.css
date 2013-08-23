@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
   color: #1f355d;
-  font-weight: 600; }
+  font-weight: 700; }
   a:active {
     color: #7091d4; }
   a:hover {
@@ -395,35 +395,46 @@ header {
         display: none;
         width: 100%;
         height: auto; } }
-    #menuBar #menu li {
+    #menuBar #menu > li {
       float: left;
-      margin-top: 0.7em; }
+      margin-top: 0.7em;
+      transition: 0s display;
+      -webkit-transition: 0s display;
+      transition-delay: 0.5s;
+      -webkit-transition-delay: 0.5s; }
       @media (max-width: 767px) {
-        #menuBar #menu li {
+        #menuBar #menu > li {
           margin: 0 auto;
           display: block;
           width: 100%;
           position: relative;
           background: #fff; } }
-      #menuBar #menu li:hover > ul {
-        display: block; }
+      #menuBar #menu > li:hover > ul {
+        display: block;
+        top: 140%;
+        right: -130%;
+        transition: 0s display;
+        -webkit-transition: 0s display;
+        transition-delay: 0.5s;
+        -webkit-transition-delay: 0.5s; }
         @media (max-width: 767px) {
-          #menuBar #menu li:hover > ul {
+          #menuBar #menu > li:hover > ul {
             display: none; } }
-      #menuBar #menu li:hover > .tooltip {
-        display: block; }
+      #menuBar #menu > li:hover > .tooltip {
+        display: block;
+        top: 20px; }
         @media (max-width: 767px) {
-          #menuBar #menu li:hover > .tooltip {
+          #menuBar #menu > li:hover > .tooltip {
             display: none; } }
-      #menuBar #menu li:last-child > ul {
+      #menuBar #menu > li:last-child > ul {
         right: 0;
         margin-right: .5em; }
-      #menuBar #menu li a {
+      #menuBar #menu > li a {
         display: block;
         padding: 10px 10px;
         font-size: .9em; }
         @media (max-width: 767px) {
-          #menuBar #menu li a {
+          #menuBar #menu > li a {
             display: inline-block;
             width: 100%;
             text-align: left;
@@ -460,9 +471,9 @@ header {
       #menuBar #menu ul ul {
         background-color: #181818;
         opacity: 1;
-        margin-top: 3.55em;
+        /* margin-top: 3.55em; */
         position: absolute;
-        left: 115%;
+        left: 92%%;
         top: 0; }
   #menuBar > ul ul {
     display: none; }
@@ -471,12 +482,12 @@ header {
 
 /* ======== 3-Column Dropdown ======== */
 .column {
-  width: 650px !important;
-  height: 650px; }
+  width: 600px !important;
+  height: 500px; }
   .column ul {
     display: block !important;
     margin-top: 3em;
-    margin-left: -12em;
+    margin-left: -9.9em;
     width: 180px !important;
     position: relative; }
   .column > li {
@@ -484,7 +495,7 @@ header {
     display: inline-table;
     text-align: left;
     float: left;
-    margin-left: 6em; }
+    margin-left: 6.6em; }
     .column > li:first-child {
       margin-left: 0; }
     .column > li:last-child {
