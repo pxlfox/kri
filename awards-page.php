@@ -14,4 +14,4 @@ Template Name: Awards Page
     <?php endwhile; endif; ?>
 	<?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
 </article>
-<?php Starkers_Utilities::get_template_parts( array( 'parts/shared/html-footer') ); ?>
+<?php Starkers_Utilities::get_template_parts( array('parts/shared/footer', 'parts/shared/html-footer') ); ?>
