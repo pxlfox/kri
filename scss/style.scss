@@ -48,6 +48,15 @@ a {
 	}
 }
 
+hr {
+	border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
 /* ======== Top Nav Bar ======== */
 
 nav {
@@ -515,6 +524,38 @@ article {
 		border-radius: 5px;
 		display: none;
 	}
+}
+
+/* ======== Team Page ======== */
+.emp_team .emp{
+	width: 100%;
+	
+	> p {
+		visibility: hidden;
+		display: none;
+	}
+	
+	img {
+		width: 30%;
+		height: auto;
+		float: left;
+	}
+	
+	.description {
+		width: 65%;
+		float: right;
+		
+		p {
+			width: 100%;
+		}
+	}
+	
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+	
 }
 
 /* ======== Blockquotes ======== */
