@@ -267,13 +267,9 @@ header {
 /* ======== 3-Column Dropdown ======== */
 
 .column {
-<<<<<<< HEAD
-	width: 600px !important;
-	height: 500px;
-=======
 	width: 650px !important;
 	height: 650px;
->>>>>>> dca9440c79b34c986007577990c8f6daf29517f0
+	
 	ul{
 		display: block !important;
 		margin-top: 3em;
@@ -488,6 +484,39 @@ article {
 .post-edit-link{
 	display:none;
 }
+
+/* ======== Staff Page ======== */
+#staff {
+	margin-top: 7em;
+	
+	img {
+		display: none;
+	}
+	
+	aside {
+		max-width: 400px;
+		position: absolute;
+		padding: 20px;
+		background-color: #fff;
+	}
+	
+	.meet-staff-button {
+		position: absolute;
+		left: 0;
+		bottom: -3em;
+		width: 100%;
+		text-align: center;
+		padding: 5px 0;
+		background: #1f355a;
+		color: #fff;
+		font-weight: 400;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		display: none;
+	}
+}
+
 /* ======== Blockquotes ======== */
 
 blockquote{

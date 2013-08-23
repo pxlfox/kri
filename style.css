@@ -482,12 +482,12 @@ header {
 
 /* ======== 3-Column Dropdown ======== */
 .column {
-  width: 600px !important;
-  height: 500px; }
+  width: 650px !important;
+  height: 650px; }
   .column ul {
     display: block !important;
     margin-top: 3em;
-    margin-left: -9.9em;
+    margin-left: -12em;
     width: 180px !important;
     position: relative; }
   .column > li {
@@ -495,7 +495,7 @@ header {
     display: inline-table;
     text-align: left;
     float: left;
-    margin-left: 6.6em; }
+    margin-left: 6em; }
     .column > li:first-child {
       margin-left: 0; }
     .column > li:last-child {
@@ -670,6 +670,31 @@ article {
 
 .post-edit-link {
   display: none; }
+
+/* ======== Staff Page ======== */
+#staff {
+  margin-top: 7em; }
+  #staff img {
+    display: none; }
+  #staff aside {
+    max-width: 400px;
+    position: absolute;
+    padding: 20px;
+    background-color: #fff; }
+  #staff .meet-staff-button {
+    position: absolute;
+    left: 0;
+    bottom: -3em;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    background: #1f355a;
+    color: #fff;
+    font-weight: 400;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: none; }
 
 /* ======== Blockquotes ======== */
 blockquote {
