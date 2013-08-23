@@ -43,6 +43,8 @@
 					$(this).removeAttr("name");
 					$('#' + id).parallax("50%", 0.7);
 				});
+				
+				$( ".emp" ).after( "<hr />" );
 
 				$('<div class="tooltip"></div>').insertBefore('#menuBar>ul>li>.children');
 				$("#slides").slidesjs({
