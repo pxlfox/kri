@@ -99,12 +99,43 @@
 		}
 	}
 	
+	function js_list_pages_include_tree_page($args) {
+		$defaults = array(
+			'depth' => 1,
+			'show_date' => '',
+			'date_format' => get_option('date_format'),
+			'child_of' => 0,
+			'exclude' => '',
+			'title_li' => __('Pages'),
+			'echo' => 1,
+			'authors' => '',
+			'sort_column' => 'menu_order, post_title',
+			'link_before' => '',
+			'link_after' => '',
+			'include_tree' => 0
+		);
+		
+		$r = wp_parse_args( $args, $defaults );
+		
+		// Print the parent page
+		$pages = get_pages('title_li=&include='.$r['include_tree'].'&depth=0');
+		
+		// Print the children
+		foreach ($pages as $pagg) {
+			echo '<li><a href="'.get_page_link($pagg->ID).'">'. $pagg->post_title.'</a>';
+			echo '<ul class="column">';
+			wp_list_pages('title_li=&child_of='.$r['include_tree'].'&depth='.($r['depth']-1));
+			echo '</ul>';
+			echo '</li>';
+		}
+	}
+	
 	function filter_ptags_on_images($content){
 	   return preg_replace('/<p>\\s*?(<a .*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', '\1', $content);
 	}
 	
 	add_filter('the_content', 'filter_ptags_on_images');
-
+	remove_filter( 'the_content', 'wpautop' );
 	/* ========================================================================================================================
 	
 	Scripts

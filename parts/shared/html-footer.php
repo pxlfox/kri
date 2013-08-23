@@ -20,7 +20,8 @@
 					});
 					
 					var align = $(this).attr('align').split(' ');
-					var margin = '19%';
+					//var margin = '19%';
+					var margin = '370px';
 					
 					if(align[0].toLowerCase() == 'right')
 					{
@@ -28,7 +29,7 @@
 					}
 					
 					$('#' + id + '-post').css({
-						'text-align': align,
+						'text-align': align[0],
 						'margin-left': margin
 					});
 					

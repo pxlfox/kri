@@ -48,8 +48,9 @@ http://www.gnu.org/licenses/gpl.html
 		// function to be called whenever the window is scrolled or resized
 		function update(){
 			var pos = $window.scrollTop();				
-
-			$this.each(function(){
+			var len = $this.length;
+			
+			$this.each(function(index){
 				var $element = $(this);
 				var top = $element.offset().top;
 				var height = getHeight($element);
@@ -58,8 +59,15 @@ http://www.gnu.org/licenses/gpl.html
 				if (top + height < pos || top > pos + windowHeight) {
 					return;
 				}
-
-				$this.css('backgroundPosition', xpos + " " + Math.round((firstTop - pos) * speedFactor) + "px");
+				
+				//console.log($this.attr('id'));
+				//console.log(index + " --- " + len);
+				
+				//if(index == len - 1)
+				//{
+					$this.css('backgroundPosition', xpos + " " + Math.round((firstTop - pos) * speedFactor) + "px");
+				//}
+				
 			});
 		}		
 

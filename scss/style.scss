@@ -171,10 +171,6 @@ header {
 		>li {
 			float: left;
 			margin-top: 0.7em;
-			transition: 0s display;
-			-webkit-transition: 0s display;
-			transition-delay: 0.5s;
-			-webkit-transition-delay: 0.5s;
 			@media #{$pym}{
 				margin: 0 auto;
 				display:block;
@@ -182,20 +178,20 @@ header {
 				position:relative;
 				background: #fff;
 			}
-			&:hover>ul{
+			&:hover ul{
 				display: block;
 				top:140%;
 				right:-130%;
-				transition: 0s display;
-				-webkit-transition: 0s display;
-				transition-delay: 0.5s;
-				-webkit-transition-delay: 0.5s;
+				visibility: visible;
+				transition-delay:0s;
 				@media#{$pym}{
 					display:none;
 				}
 			}
 			&:hover>.tooltip{
 				display: block;
+				visibility: visible;
+				transition-delay:0s;
 				top:20px;
 				@media#{$pym}{
 					display:none;
@@ -265,7 +261,9 @@ header {
 	}
 	> ul {
 		ul {
-			display: none;
+			display: block;
+			visibility: hidden;
+			transition-delay: $transition;
 		}
 		>li>a{
 			margin-right: 1em;
@@ -277,12 +275,12 @@ header {
 
 .column {
 	width: 650px !important;
-	height: 650px;
+	height: 500px;
 	
 	ul{
 		display: block !important;
-		margin-top: 3em;
-		margin-left: -12em;
+		margin-top: -1em;
+		margin-left: -10em;
 		width: 180px !important;
 		position: relative;
 	}
@@ -363,7 +361,9 @@ header {
 }
 
 .tooltip {
-	display: none;
+	display: block;
+	visibility: hidden;
+	transition-delay: $transition;
 	margin-left: 31%;
 	z-index: 15;
 	width: 0;
@@ -428,7 +428,6 @@ header {
 article {
 	position: absolute;
 	margin: 7em 0 4em 0;
-	padding-bottom: 5em;
 	width: 100%;
 	text-align: center;
 	@media#{$pym}{
@@ -556,6 +555,34 @@ article {
 		display: block;
 	}
 	
+}
+
+/* ======== Page Dropdown List ======== */
+ul.page_list {
+	width: 50%;
+	
+	> li {
+		> .column {
+			display: block;
+			height: auto;
+			margin-top: 5px;
+			
+			li {
+				margin-left: 0;
+				float: none;
+				display: list-item;
+				margin-left: 25px;
+				
+				.children
+				{
+					width: auto !important;
+					li {
+						margin: 10px 0 0 50px;
+					}
+				}
+			}
+		}
+	}
 }
 
 /* ======== Blockquotes ======== */
