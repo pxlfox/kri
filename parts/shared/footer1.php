@@ -1,17 +1,12 @@
-	
-<!--
-<footer>
-	&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.
-</footer>
--->
-
 <footer>
 	<div class="leftFoot">
 		<span>Kato Roofing, Inc.</span>
 		<p>321 West Lundin Blvd.
 		<br/>Mankato, MN 56001
 		</p>
-		<span>24/7 Service: (507)388-4112</span>
+		<p>Office: ###.###.####
+		<br/>24/7 Service: ###.###.####
+		</p>
 		<span>&copy; <?php echo date("Y") ?>. All rights reserved.</span>
 	</div>
 	<div class="rightFoot">
