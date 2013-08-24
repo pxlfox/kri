@@ -517,13 +517,18 @@ header {
   border: none !important; }
 
 #navImage {
-  border: 1px solid red;
   background-image: url(img/building1thumb.jpg);
   width: 178px;
   height: 118px; }
 
 #navTestimonial {
-  border: 1px solid red; }
+  color: #fff; }
+  #navTestimonial p {
+    font-size: 11pt;
+    text-align: left; }
+  #navTestimonial cite {
+    font-size: 9pt;
+    text-align: right; }
 
 /* ======== CSS Shapes ======== */
 #logoBlockAngle {

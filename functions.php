@@ -82,7 +82,14 @@
 		
 		// Print the parent page
 		$pages = get_pages('title_li=&include='.$r['include_tree'].'&depth=0');
+		$testimonialContent = get_page(33)->post_content;
+		$source = new DOMDocument();
+		$source -> loadHTML($testimonialContent);
+		$path = new DOMXpath($source);
+		$dom = $path->query("*/blockquote/p");
+		$cite = $path->query("*/blockquote/cite");
 		
+			
 		// Print the children
 		foreach ($pages as $pagg) {
 			echo '<li><a href="'.get_page_link($pagg->ID).'">'. $pagg->post_title.'</a>';
@@ -92,7 +99,24 @@
 			echo '<li class="column-right"><a href="#">Testimonials</a>';
 			echo '<ul>';
 			echo '<li><div id="navImage"></div></li>';
-			echo '<li><div id="navTestimonial">Testimonial area</div></li>';
+			echo '<li><div id="navTestimonial">';
+			//echo $stringVal;
+			if(!$dom == 0)
+			{
+				$qty = $dom->length;
+				
+				$rand = rand(0, $qty);
+				
+				$node = $dom->item($rand);
+				$citeNode = $cite->item($rand);
+				//$stringVal = $node->nodeValue;
+				$stringVal = $node->nodeValue;
+				$citeVal = $citeNode->nodeValue;
+				echo '<p>'.$stringVal.'</p>';
+				echo '<br />';
+				echo '<cite>'.$citeVal.'</cite>';
+			}
+			echo '</div></li>';
 			echo '</ul></li>';
 			echo '</ul>';
 			echo '</li>';
