@@ -312,14 +312,23 @@ header {
 }
 
 #navImage {
-	border: 1px solid red;
 	background-image: url(img/building1thumb.jpg);
 	width: 178px;
 	height: 118px;
 }
 
 #navTestimonial {
-	border: 1px solid red;
+	color: #fff;
+	
+	p {
+		font-size: 11pt;
+		text-align: left;
+	}
+	
+	cite {
+		font-size: 9pt;
+		text-align: right;
+	}
 }
 	
 /* ======== CSS Shapes ======== */
