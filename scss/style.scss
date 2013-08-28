@@ -181,7 +181,7 @@ header {
 			&:hover ul{
 				display: block;
 				top:140%;
-				right:-130%;
+				right:-87%;
 				visibility: visible;
 				transition-delay:0s;
 				@media#{$pym}{
@@ -275,7 +275,7 @@ header {
 
 .column {
 	width: 650px !important;
-	height: 500px;
+	height: 525px;
 	
 	ul{
 		display: block !important;
@@ -319,6 +319,9 @@ header {
 
 #navTestimonial {
 	color: #fff;
+	background-color: rgba(237,237,237,0.4);
+	padding: 10px;
+	margin-top: .3em;
 	
 	p {
 		font-size: 11pt;
@@ -330,7 +333,21 @@ header {
 		text-align: right;
 	}
 }
+
+/* ======== Social Links ======*/
+.social_links {
+	display: inline-table;
 	
+	a {
+		float: left;
+	}
+	
+	img {
+		width: 35px;
+		height: auto;
+	}
+}
+
 /* ======== CSS Shapes ======== */
 
 #logoBlockAngle {
@@ -453,6 +470,9 @@ article {
 		@media#{$barton}{
 			margin-left:0;
 		}
+		@media#{$pym}{
+			text-align: center;
+		}
 		&:nth-of-type(3){
 			display:none;
 			@media #{$barton}{
@@ -462,7 +482,13 @@ article {
 		}
 	}
 	h1{
-		margin: 0 0 1em 1em;
+		margin: 1em auto 1.5em auto;
+		text-align: center;
+		@media#{$barton}{
+			margin: 0 0 1em 1em;
+			text-indent: 1em;
+			text-align: left;
+		}
 	}
 	li{
 		list-style: square;
@@ -486,6 +512,11 @@ article {
 			width:90%;
 			margin: 2em auto;
 			text-align:left;
+			/*
+@media#{$barton}{
+				text-indent: 1em;
+			}
+*/
 		}
 		img{
 			vertical-align:top;
@@ -503,6 +534,12 @@ article {
 			width: 30%;
 			height:auto;
 			display:inline-block;
+			
+			.roofingsuppliers {
+				height: 150px;
+				width: auto;
+			}
+			
 			@media #{$pym}{
 				width:90%;
 				margin:.5em auto;

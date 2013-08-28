@@ -6,6 +6,12 @@
 	<script type="text/javascript" src="<?php echo get_dir_path("js"); ?>/jquery.slides.min.js"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function($) {
+				var root = "/kri/wp-content/themes/starker/";
+				var emailLink = "mailto:info@katoroofing.com";
+				var twitterLink = "https://twitter.com/KatoRoofingInc";
+				var facebookLink = "http://facebook.com/katoroofing";
+				var linkedinLink = "http://www.linkedin.com/company/kato-roofing-inc-kri-?";
+				
 				$('#staff .post div').each(function() {
 					var src = $(this).attr('name').replace('http://' + document.domain, '');
 					var id = $(this).attr('id');
@@ -46,7 +52,9 @@
 				});
 				
 				$( ".emp" ).after( "<hr />" );
-
+				
+				$("#menu>li li:last-child").last().after("<li class=\"social_links\"><a href=\"" + emailLink + "\"><img src=\"" + root + "img/eml.png\" alt=\"email\" /></a><a href=\"" + twitterLink + "\"><img src=\"" + root + "img/tw.png\" alt=\"twitter\" /></a><a href=\"" + facebookLink + "\"><img src=\"" + root + "img/fb.png\" alt=\"facebook\" /></a><a href=\"" + linkedinLink + "\"><img src=\"" + root + "img/Linkedin.png\" alt=\"googleplus\" /></a></li>");
+								
 				$('<div class="tooltip"></div>').insertBefore('#menuBar>ul>li>.children');
 				$("#slides").slidesjs({
 					navigation: { active: false, },

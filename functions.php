@@ -86,7 +86,7 @@
 		$source = new DOMDocument();
 		$source -> loadHTML($testimonialContent);
 		$path = new DOMXpath($source);
-		$dom = $path->query("*/blockquote/p");
+		$dom = $path->query("*/blockquote");
 		$cite = $path->query("*/blockquote/cite");
 		
 			
@@ -109,9 +109,14 @@
 				
 				$node = $dom->item($rand);
 				$citeNode = $cite->item($rand);
-				//$stringVal = $node->nodeValue;
+				
 				$stringVal = $node->nodeValue;
 				$citeVal = $citeNode->nodeValue;
+				
+				$stringVal = str_replace($citeVal, "", $stringVal);
+				//truncate long testimonials
+				$stringVal = (strlen($stringVal) > 200) ? substr($stringVal,0,200).'...' : $stringVal;
+				
 				echo '<p>'.$stringVal.'</p>';
 				echo '<br />';
 				echo '<cite>'.$citeVal.'</cite>';
